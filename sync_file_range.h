@@ -16,7 +16,7 @@
 #define NR_sync_file_range 277
 #endif
 
-static inline int sync_file_range(int fd, loff_t offset, loff_t nbytes,
+static inline int sync_file_range(int fd, off_t offset, off_t nbytes,
 					int flags)
 {
 	return syscall(NR_sync_file_range, fd, offset, nbytes, flags);
